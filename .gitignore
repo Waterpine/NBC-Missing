@@ -148,5 +148,13 @@ tools/stat.py
 tools/result_analysis.py
 
 cr-nbc.pdf
-datasets/*.csv
+datasets/creditcard.csv
+datasets/company_bankruptcy_prediction.csv
+datasets/employee.csv
+datasets/fetal_health.csv
+datasets/fitness_class.csv
+datasets/heart.csv
+datasets/mushrooms.csv
+datasets/star_classification.csv
+datasets/winequalityN.csv
 datasets/*.zip
