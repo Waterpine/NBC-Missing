@@ -52,17 +52,17 @@ if __name__ == '__main__':
                + '_' + str(0.2) \
                + '_' + re.sub(r'[^0-9]', '', str(datetime.datetime.now())) + '.txt'
 
-    # # Approximate Decision
-    # start_time = time.time()
-    # approximate_decision(data, X_test_list)
-    # end_time = time.time()
-    # run_time = end_time - start_time
-    # print(run_time, 's')
-    # with open(filename, 'a') as file:
-    #     file.write("========== Approximate Decision (AD) ==========" + "\n")
-    #     file.write("total_run_time: " + str(run_time) + '\n')
-    #     file.write("\n")
-    #
+    # Approximate Decision
+    start_time = time.time()
+    approximate_decision(data, X_test_list)
+    end_time = time.time()
+    run_time = end_time - start_time
+    print(run_time, 's')
+    with open(filename, 'a') as file:
+        file.write("========== Approximate Decision (AD) ==========" + "\n")
+        file.write("total_run_time: " + str(run_time) + '\n')
+        file.write("\n")
+
     # # Iterative Algorithm
     # start_time = time.time()
     # iterative_algorithm(data, X_test_list)
@@ -75,16 +75,16 @@ if __name__ == '__main__':
     #     file.write("\n")
 
     # Iterative Algorithm with Index
-    start_time = time.time()
-    query_time = iterative_algorithm_with_index(data, X_test_list)
-    end_time = time.time()
-    run_time = end_time - start_time
-    print(run_time, 's')
-    with open(filename, 'a') as file:
-        file.write("========== Iterative Algorithm with Index (Iterate+Index) ==========" + "\n")
-        file.write("total_run_time: " + str(run_time) + '\n')
-        file.write("query_time: " + str(query_time) + '\n')
-        file.write("index_time: " + str(run_time - query_time) + '\n')
-        file.write("\n")
+    # start_time = time.time()
+    # query_time = iterative_algorithm_with_index(data, X_test_list)
+    # end_time = time.time()
+    # run_time = end_time - start_time
+    # print(run_time, 's')
+    # with open(filename, 'a') as file:
+    #     file.write("========== Iterative Algorithm with Index (Iterate+Index) ==========" + "\n")
+    #     file.write("total_run_time: " + str(run_time) + '\n')
+    #     file.write("query_time: " + str(query_time) + '\n')
+    #     file.write("index_time: " + str(run_time - query_time) + '\n')
+    #     file.write("\n")
 
 

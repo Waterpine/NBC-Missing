@@ -27,10 +27,15 @@ def approximate_decision(data, X_test_list):
         flag = True
         X_test = X_test_list[i]
         for k in range(100):
+            random_gene = []
+            for j in range(len(indicator[0])):
+                random_gene.append(np.random.choice(col_dom[j], len(indicator)))
+            random_gene_array = np.array(random_gene).T
             for i in range(len(indicator)):
                 for j in range(len(indicator[i])):
                     if indicator[i][j] == True:
-                        P[i][j] = random.sample(col_dom[j], 1)[0]
+                        P[i][j] = random_gene_array[i][j]
+                        # P[i][j] = random.sample(col_dom[j], 1)[0]
             pred = naivebayes.predict_single(P, y_train, X_test)
             if len(pred_list) == 0:
                 pred_list.append(pred)

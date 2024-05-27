@@ -146,6 +146,7 @@ datasets/dataset_details.docx
 source/
 tools/stat.py
 tools/result_analysis.py
+analysis.py
 
 cr-nbc.pdf
 datasets/creditcard.csv
